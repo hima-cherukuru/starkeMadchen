@@ -1,4 +1,8 @@
 StarkeMadchen::Application.routes.draw do
+  get "pages/Women"
+
+  get "pages/firstPage"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
