@@ -4,4 +4,13 @@ class PagesController < ApplicationController
 
   def Women
   end
+  
+  def Men
+  end
+  
+  def Accessories
+  end
+  
+  def Shoes
+  end
 end

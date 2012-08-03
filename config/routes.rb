@@ -2,6 +2,12 @@ StarkeMadchen::Application.routes.draw do
   get "pages/Women"
 
   get "pages/firstPage"
+  
+  get "pages/Men"
+  
+  get "pages/Accessories"
+  
+  get "pages/Shoes"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
