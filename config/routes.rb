@@ -1,13 +1,11 @@
 StarkeMadchen::Application.routes.draw do
-  get "pages/Women"
-
-  get "pages/firstPage"
+  root to: 'pages#firstPage'
   
-  get "pages/Men"
+  match '/Women', to: 'pages#Women'
   
-  get "pages/Accessories"
+  match '/Accessories', to: 'pages#Accessories'
   
-  get "pages/Shoes"
+  match '/Shoes', to: 'pages#Shoes'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

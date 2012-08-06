@@ -4,10 +4,7 @@ class PagesController < ApplicationController
 
   def Women
   end
-  
-  def Men
-  end
-  
+
   def Accessories
   end
   
