@@ -1,18 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style type=text/css>
-  body {
-  	border-style:ridge;
-  }
-  </style>
+	<style type="text/css">
+		.span8 h1
+		{
+			color:#FE6E4C; font-weight: bold; padding: 50px; text-align: center
+		}
+		.span2 form
+		{
+			alignment-adjust:text-after-edge;
+		}
+		.btn-small
+		{
+			height: 20px; padding: none; text-height: 2px; text-indent: 
+		}
+		.input-text
+		{
+			padding: 0px; margin: 2px; width: 60px;
+		}
+	</style>
   <title>StarkeMadchen</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div><img src="/images/rails.png">Rails</div>
+	<div class="container">
+		<div class="row">
+			<div class="span8">
+				<h1>StarkeMadchen</h1>
+			</div>
+			<div class="span2">
+				<form class="right">
+					<input type="text" class="input-text" placeholder="Email">
+					<input type="password" class="input-text" placeholder="Password">
+					<label class="checkbox">
+						<input type="checkbox">Remember me
+					</label>
+					<button type="submit" class="btn btn-small">Sign In</button>
+				</form>
+			</div>
+			<div class="span2">
+				<form class="right">
+					<input type="text" class="input-text" placeholder="Email">
+					<input type="text" class="input-text" placeholder="FirstName">
+					<input type="text" class="input-text" placeholder="LastName">
+					<input type="password" class="input-text" placeholder="Password">
+					<button type="submit" class="btn btn-small">Create Account</button>
+				</form>
+			</div>
+			<div class="nav pull-right">
+				<form>
+					<input type="text" class="input-large search-query ">
+					<button type="submit" class="btn btn-small">Search</button>
+				</form>
+			</div>
+		</div>	
+	</div>
+
 <%= yield %>
 
 </body>
