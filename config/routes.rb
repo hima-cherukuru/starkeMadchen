@@ -1,7 +1,7 @@
 StarkeMadchen::Application.routes.draw do
   root to: 'pages#firstPage'
   
-  match '/Women', to: 'pages#Women'
+  match '/Clothes', to: 'pages#Clothes'
   
   match '/Accessories', to: 'pages#Accessories'
   

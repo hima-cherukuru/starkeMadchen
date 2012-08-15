@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def firstPage
   end
 
-  def Women
+  def Clothes
   end
 
   def Accessories

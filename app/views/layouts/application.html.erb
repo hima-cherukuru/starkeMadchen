@@ -2,9 +2,22 @@
 <html>
 <head>
 	<style type="text/css">
-		.main-body
+		.page-style
 		{
-			background-color: #804040;
+			background-color: #804040;	
+		}
+		.body-head
+		{
+			margin: 20px; 
+		}
+		.body-content
+		{
+			margin:40px;
+			text-align:center;
+		}
+		.row
+		{
+			text-align: center;	
 		}
 		.span6 h1
 		{
@@ -17,11 +30,12 @@
 		}
 		.btn-small
 		{
-			height: 25px; padding: 0px; text-align: center;
+			height: 25px; padding: 0px; text-align: center; width:auto
 		}
-		.input-smallest
+		
+		.input-small
 		{
-			padding: 0px; margin: 2px; width: 80px;
+			height: 10px;
 		}
 	</style>
   <title>StarkeMadchen</title>
@@ -29,40 +43,55 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body class="main-body">
-	<div class="container">
-		<div class="row">
-			<div class="span3">
-				<form class="right">
-					<input type="text" class="input-smallest" placeholder="Email">
-					<input type="text" class="input-smallest" placeholder="FirstName">
-					<input type="text" class="input-smallest" placeholder="LastName">
-					<input type="password" class="input-smallest" placeholder="Password">
-					<button type="submit" class="btn-small">Create Account</button>
-				</form>
+<body class="page-style">
+	<div class="body-head">
+		<div class="container-fluid" style="padding:0px;margin:0px;">
+			<div class="row-fluid">
+				<div class="span3">
+					<form class="navbar pull-left" style="margin-left:20px">
+						<div class="row">
+							<input type="text" class="input-small" placeholder="FirstName">
+							<input type="text" class="input-small" placeholder="LastName">
+						</div>
+						<div class="row">
+							<input type="text" class="input-small" placeholder="Email">
+							<input type="password" class="input-small" placeholder="Password">
+						</div>
+						<div class="row">
+							<button type="submit" class="btn-small">Create Account</button>
+						</div>
+					</form>
+				</div>
+				<div class="span6">
+					<h1>STARKE MADCHEN</h1>
+				</div>
+				<div class="span3">
+					<div class="row">
+						<form class="nav pull-right">
+							<div class="row">
+							<input type="text" class="input-small" placeholder="Email">
+							<input type="password" class="input-small" placeholder="Password">
+							</div>
+							<div class="row">
+							<input type="checkbox">Remember me
+							</div>
+							<div class="row">
+								<button type="submit" class="btn-small">Sign In</button>
+							</div>
+						</form>	
+					</div>
+					<div class="row">
+						<div class="nav pull-right">
+							<form>
+								<input type="text" class="search-query" style="height: 10px; width: 110px;">
+								<button type="submit" class="btn-small">Search</button>
+							</form>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="span6">
-				<h1>STARKE MADCHEN</h1>
-			</div>
-			<div class="span3">
-				<form class="right">
-					<input type="text" class="input-smallest" placeholder="Email">
-					<input type="password" class="input-smallest" placeholder="Password">
-					<label class="checkbox">
-						<input type="checkbox">Remember me
-					</label>
-					<button type="submit" class="btn-small">Sign In</button>
-				</form>
-			</div>
-			<div class="nav pull-right">
-				<form>
-					<input type="text" class="input-small search-query ">
-					<button type="submit" class="btn-small">Search</button>
-				</form>
-			</div>
-		</div>	
+		</div>
 	</div>
-
 <%= yield %>
 
 </body>
