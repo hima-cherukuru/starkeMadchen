@@ -2,21 +2,26 @@
 <html>
 <head>
 	<style type="text/css">
-		.span8 h1
+		.main-body
 		{
-			color:#FE6E4C; font-weight: bold; padding: 50px; text-align: center
+			background-color: #804040;
 		}
-		.span2 form
+		.span6 h1
 		{
-			alignment-adjust:text-after-edge;
+			font-weight: bold;
+			padding: 30px; 
+			text-align: center;
+			font-family:Geneva;
+  			font-size: 35px;
+  			color: #ffffff;
 		}
 		.btn-small
 		{
-			height: 20px; padding: none; text-height: 2px; text-indent: 
+			height: 25px; padding: 0px; text-align: center;
 		}
-		.input-text
+		.input-smallest
 		{
-			padding: 0px; margin: 2px; width: 60px;
+			padding: 0px; margin: 2px; width: 80px;
 		}
 	</style>
   <title>StarkeMadchen</title>
@@ -24,35 +29,35 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="main-body">
 	<div class="container">
 		<div class="row">
-			<div class="span8">
-				<h1>StarkeMadchen</h1>
-			</div>
-			<div class="span2">
+			<div class="span3">
 				<form class="right">
-					<input type="text" class="input-text" placeholder="Email">
-					<input type="password" class="input-text" placeholder="Password">
+					<input type="text" class="input-smallest" placeholder="Email">
+					<input type="text" class="input-smallest" placeholder="FirstName">
+					<input type="text" class="input-smallest" placeholder="LastName">
+					<input type="password" class="input-smallest" placeholder="Password">
+					<button type="submit" class="btn-small">Create Account</button>
+				</form>
+			</div>
+			<div class="span6">
+				<h1>STARKE MADCHEN</h1>
+			</div>
+			<div class="span3">
+				<form class="right">
+					<input type="text" class="input-smallest" placeholder="Email">
+					<input type="password" class="input-smallest" placeholder="Password">
 					<label class="checkbox">
 						<input type="checkbox">Remember me
 					</label>
-					<button type="submit" class="btn btn-small">Sign In</button>
-				</form>
-			</div>
-			<div class="span2">
-				<form class="right">
-					<input type="text" class="input-text" placeholder="Email">
-					<input type="text" class="input-text" placeholder="FirstName">
-					<input type="text" class="input-text" placeholder="LastName">
-					<input type="password" class="input-text" placeholder="Password">
-					<button type="submit" class="btn btn-small">Create Account</button>
+					<button type="submit" class="btn-small">Sign In</button>
 				</form>
 			</div>
 			<div class="nav pull-right">
 				<form>
-					<input type="text" class="input-large search-query ">
-					<button type="submit" class="btn btn-small">Search</button>
+					<input type="text" class="input-small search-query ">
+					<button type="submit" class="btn-small">Search</button>
 				</form>
 			</div>
 		</div>	
