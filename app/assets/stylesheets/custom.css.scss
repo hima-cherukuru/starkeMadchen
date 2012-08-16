@@ -1,1 +1,24 @@
 @import "bootstrap";
+
+html
+{
+  overflow-y: scroll;  
+}
+
+.page-style
+{
+  background-color: #171720;
+}
+
+h1,h2,h3,h4,h5
+{
+  font-family: "Times New Roman", Times, serif ;
+}
+.row-fluid h3
+{
+  color:#FFFFFF;
+}
+.no-bullets
+{
+  list-style-type: none;
+}
