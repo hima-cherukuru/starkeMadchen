@@ -8,20 +8,8 @@
 		}
 		.body-content
 		{
-			margin:5px;
 			text-align:center;
-		}
-		.row
-		{
-			text-align: center;	
-		}
-		.span6 h1
-		{
-			font-size: 27px;
-			font-style:italic;
-			padding: 30px; 
-			text-align: center;
-			color:#FFFFFF;
+			padding: 50px;
 		}
 		.btn-small
 		{
@@ -31,65 +19,51 @@
 		{
 			height: 10px; background:#CCCCCC
 		}
-		.search-query
-		{
-			background:#CCCCCC
-		}
 	</style>
-  <title>StarkeMadchen</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  	<title>StarkeMadchen</title>
+  	<%= stylesheet_link_tag    "application", :media => "all" %>
+  	<%= javascript_include_tag "application" %>
+  	<%= csrf_meta_tags %>
+  	
 </head>
 <body class="page-style">
-	<div class="body-head">
-		<div class="container-fluid" style="padding:0px;margin:0px;">
-			<div class="row-fluid">
-				<div class="span3">
-					<form class="navbar pull-left" style="margin-left:20px">
-						<div class="row">
-							<input type="text" class="input-small" placeholder="FirstName">
-							<input type="text" class="input-small" placeholder="LastName">
-						</div>
-						<div class="row">
-							<input type="text" class="input-small" placeholder="Email">
-							<input type="password" class="input-small" placeholder="Password">
-						</div>
-						<div class="row">
-							<button type="submit" class="btn-small">Create Account</button>
-						</div>
-					</form>
-				</div>
-				<div class="span6">
-					<h1>STARKE MADCHEN</h1>
-				</div>
-				<div class="span3">
-					<div class="row">
-						<form class="nav pull-right">
-							<div class="row">
-							<input type="text" class="input-small" placeholder="Email">
-							<input type="password" class="input-small" placeholder="Password">
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="brand" href="#">STARKE MADCHEN</a>
+				<div class="nav-collapse">
+					<ul class="nav pull-right">
+						<li class="drop down" id="accountmenu">
+							<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In<b class="caret"></b></a>
+							<div class="dropdown-menu">
+								<form>
+									<input type="text" class="input-small" placeholder="Email">
+									<input type="password" class="input-small" placeholder="Password">
+									<input type="checkbox">Remember Me
+									<button type="submit" class="btn-small">Sign In</button>
+								</form>
 							</div>
-							<div class="row">
-							<input type="checkbox" style="background:#CCCCCC">Remember me
+						</li>
+						<li class="divider-vertical">
+						</li>
+						<li class="drop down">
+							<a class="dropdown-toggle" href="#" data-toggle="dropdown">Create Account<b class="caret"></b></a>
+							<div class="dropdown-menu">
+								<form>
+									<input type="text" class="input-small" placeholder="FirstName">
+									<input type="text" class="input-small" placeholder="LastName">
+									<input type="text" class="input-small" placeholder="Email">
+									<input type"password" class="input-small" placeholder="Password">
+									<button type="submit" class="btn-small">CreateAccount</button>
+								</form>
 							</div>
-							<div class="row">
-								<button type="submit" class="btn-small">Sign In</button>
-							</div>
-						</form>	
-					</div>
-					<div class="row">
-						<div class="nav pull-right">
-							<form>
-								<input type="text" class="search-query" style="height: 10px; width: 110px;">
-								<button type="submit" class="btn-small">Search</button>
-							</form>
-						</div>
-					</div>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>	
+	
 <%= yield %>
 
 </body>
