@@ -1,4 +1,6 @@
 StarkeMadchen::Application.routes.draw do
+  resources :users
+  
   root to: 'pages#firstPage'
   
   match '/Clothes', to: 'pages#Clothes'
@@ -6,6 +8,8 @@ StarkeMadchen::Application.routes.draw do
   match '/Accessories', to: 'pages#Accessories'
   
   match '/Shoes', to: 'pages#Shoes'
+  
+  match '/signup', to: 'users#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
