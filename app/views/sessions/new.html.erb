@@ -1,0 +1,15 @@
+<div class="body-content">
+	<%= form_for(:session, url: sessions_path) do |f| %>
+		
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+		
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+		
+		<div class="row">
+			<%= f.submit "Sign In", class: "btn btn-medium btn-primary" %>
+		</div>
+	<% end %>
+</div>
+

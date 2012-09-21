@@ -27,6 +27,11 @@
   	
 </head>
 <body class="page-style">
+	<% flash.each do |key,value| %>
+		<div class="alert alert-<%= key %> body-content">
+			<%= value %>
+		</div>
+	<% end %>
 	<%= render 'layouts/header' %>
 	<%= yield %>
 	<%= render 'layouts/footer' %>
