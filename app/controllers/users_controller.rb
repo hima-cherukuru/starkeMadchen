@@ -11,9 +11,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to @user
+      flash.now[:success] = "Welcome to StarkeMadchen" 
+      redirect_to(:back)
     else
-      render 'new'
+      flash.now[:error] = "Invalid Sign Up"
+      render 'pages/firstPage'
     end
   end
 end

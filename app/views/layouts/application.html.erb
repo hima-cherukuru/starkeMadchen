@@ -19,6 +19,10 @@
 		{
 			height: 10px; background:#CCCCCC
 		}
+		.flash_msg
+		{
+			color:#FFFFFF;
+		}
 	</style>
   	<title>StarkeMadchen</title>
   	<%= stylesheet_link_tag    "application", :media => "all" %>
@@ -27,12 +31,16 @@
   	
 </head>
 <body class="page-style">
+	<%= render 'layouts/header' %>
+	
 	<% flash.each do |key,value| %>
-		<div class="alert alert-<%= key %> body-content">
+		<p><br></p>
+		<p><br></p>
+		<div class="alert alert-<%=key%>" style="text-align:center">
 			<%= value %>
 		</div>
 	<% end %>
-	<%= render 'layouts/header' %>
+	
 	<%= yield %>
 	<%= render 'layouts/footer' %>
 	<%= debug(params) if Rails.env.development? %>

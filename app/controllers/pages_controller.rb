@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def firstPage
+    @user = User.new
   end
 
   def Clothes
