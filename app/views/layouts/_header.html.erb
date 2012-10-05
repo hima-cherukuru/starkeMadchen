@@ -20,8 +20,7 @@ $(function() {
 					<ul class="nav pull-right">
 						<% if signed_in? %>
 							<li id="fat-menu" class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-									Hello <%= @current_user %>!<br> 
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"> 
 									Your Account <b class="caret"></b>
 								</a>
 								<ul class="dropdown-menu">
@@ -30,7 +29,7 @@ $(function() {
 									<li><%= link_to "Your WishList", "#" %></li>
 									<li class="divider"></li>
 									<li>
-										<%= link_to "Sign Out", "#" %>
+										<%= link_to "Sign Out", signout_path, method: "delete" %>
 									</li>
 								</ul>
 							</li>
